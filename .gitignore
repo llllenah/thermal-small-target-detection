@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+*.engine
+*.pt
+*.pth
+*.pth.tar
+trt_cache/
+runs/
+datasets/
+data/
+eda_out/
+*.zip
+.ipynb_checkpoints/
+.DS_Store

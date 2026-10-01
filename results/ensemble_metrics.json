@@ -1,0 +1,735 @@
+{
+ "model": "yolo26m-p2",
+ "gpu": "NVIDIA GeForce RTX 4090",
+ "fp_budget": 0.7,
+ "skydet_provider": "CUDAExecutionProvider",
+ "versions": {
+  "torch": "2.8.0+cu128",
+  "ultralytics": "8.4.171",
+  "tensorrt": "11.3.0.99",
+  "onnxruntime": "1.24.4"
+ },
+ "configs": {
+  "yolo": {
+   "ty": 0.05,
+   "ts": 0.3,
+   "a": 0.25
+  },
+  "skydet": {
+   "ty": 0.05,
+   "ts": 0.3,
+   "a": 0.25
+  },
+  "yolo+skydet": {
+   "ty": 0.15,
+   "ts": 0.3,
+   "a": 0.25
+  }
+ },
+ "val": {
+  "yolo": {
+   "val": {
+    "frames": 6431,
+    "targets": 4373,
+    "recall": 0.9037,
+    "fp_per_frame": 0.1438,
+    "fp_max": 1
+   },
+   "val_empty": {
+    "frames": 1350,
+    "targets": 0,
+    "recall": null,
+    "fp_per_frame": 0.4867,
+    "fp_max": 1
+   },
+   "val_irstd": {
+    "frames": 201,
+    "targets": 190,
+    "recall": 0.4211,
+    "fp_per_frame": 0.0398,
+    "fp_max": 1
+   },
+   "val_sun": {
+    "frames": 201,
+    "targets": 190,
+    "recall": 0.4842,
+    "fp_per_frame": 0.0448,
+    "fp_max": 1
+   },
+   "val_bg": {
+    "frames": 255,
+    "targets": 0,
+    "recall": null,
+    "fp_per_frame": 0.5176,
+    "fp_max": 1
+   }
+  },
+  "skydet": {
+   "val": {
+    "frames": 6431,
+    "targets": 4373,
+    "recall": 0.4894,
+    "fp_per_frame": 0.0927,
+    "fp_max": 1
+   },
+   "val_empty": {
+    "frames": 1350,
+    "targets": 0,
+    "recall": null,
+    "fp_per_frame": 0.2637,
+    "fp_max": 1
+   },
+   "val_irstd": {
+    "frames": 201,
+    "targets": 190,
+    "recall": 0.6947,
+    "fp_per_frame": 0.0199,
+    "fp_max": 1
+   },
+   "val_sun": {
+    "frames": 201,
+    "targets": 190,
+    "recall": 0.6842,
+    "fp_per_frame": 0.0249,
+    "fp_max": 1
+   },
+   "val_bg": {
+    "frames": 255,
+    "targets": 0,
+    "recall": null,
+    "fp_per_frame": 0.3804,
+    "fp_max": 1
+   }
+  },
+  "yolo+skydet": {
+   "val": {
+    "frames": 6431,
+    "targets": 4373,
+    "recall": 0.8973,
+    "fp_per_frame": 0.1379,
+    "fp_max": 1
+   },
+   "val_empty": {
+    "frames": 1350,
+    "targets": 0,
+    "recall": null,
+    "fp_per_frame": 0.523,
+    "fp_max": 1
+   },
+   "val_irstd": {
+    "frames": 201,
+    "targets": 190,
+    "recall": 0.7,
+    "fp_per_frame": 0.0348,
+    "fp_max": 1
+   },
+   "val_sun": {
+    "frames": 201,
+    "targets": 190,
+    "recall": 0.7,
+    "fp_per_frame": 0.0398,
+    "fp_max": 1
+   },
+   "val_bg": {
+    "frames": 255,
+    "targets": 0,
+    "recall": null,
+    "fp_per_frame": 0.5569,
+    "fp_max": 1
+   }
+  }
+ },
+ "results": {
+  "yolo": {
+   "test_all": {
+    "frames": 21551,
+    "targets": 18575,
+    "recall": 0.864,
+    "fp_per_frame": 0.0591,
+    "fp_max": 1,
+    "frames_fp_gt1": 0.0,
+    "frames_fp_ge1": 0.0591,
+    "recall_by_size": {
+     "17-32": 0.905,
+     "33-50": 0.995,
+     "5-8": 0.509,
+     "9-16": 0.82
+    }
+   },
+   "test_AIR": {
+    "frames": 5268,
+    "targets": 3911,
+    "recall": 0.9954,
+    "fp_per_frame": 0.0167,
+    "fp_max": 1,
+    "frames_fp_gt1": 0.0,
+    "frames_fp_ge1": 0.0167,
+    "recall_by_size": {
+     "17-32": 0.994,
+     "33-50": 0.998,
+     "5-8": 0.0,
+     "9-16": 0.993
+    }
+   },
+   "test_MIXED": {
+    "frames": 16174,
+    "targets": 14664,
+    "recall": 0.8289,
+    "fp_per_frame": 0.0722,
+    "fp_max": 1,
+    "frames_fp_gt1": 0.0,
+    "frames_fp_ge1": 0.0722,
+    "recall_by_size": {
+     "17-32": 0.889,
+     "33-50": 0.99,
+     "5-8": 0.511,
+     "9-16": 0.804
+    }
+   },
+   "test_empty": {
+    "frames": 1019,
+    "targets": 0,
+    "recall": null,
+    "fp_per_frame": 0.2149,
+    "fp_max": 1,
+    "frames_fp_gt1": 0.0,
+    "frames_fp_ge1": 0.2149,
+    "recall_by_size": {}
+   },
+   "test_sun_synth": {
+    "frames": 3074,
+    "targets": 1863,
+    "recall": 0.8744,
+    "fp_per_frame": 0.107,
+    "fp_max": 1,
+    "frames_fp_gt1": 0.0,
+    "frames_fp_ge1": 0.107,
+    "recall_by_size": {
+     "17-32": 0.915,
+     "33-50": 0.992,
+     "5-8": 0.534,
+     "9-16": 0.835
+    }
+   },
+   "sirst_sky_targets": {
+    "frames": 514,
+    "targets": 305,
+    "recall": 0.6426,
+    "fp_per_frame": 0.0136,
+    "fp_max": 1,
+    "frames_fp_gt1": 0.0,
+    "frames_fp_ge1": 0.0136,
+    "recall_by_size": {
+     "17-32": 0.793,
+     "33-50": 1.0,
+     "5-8": 0.553,
+     "9-16": 0.717
+    }
+   },
+   "sirst_no_targets": {
+    "frames": 255,
+    "targets": 0,
+    "recall": null,
+    "fp_per_frame": 0.3098,
+    "fp_max": 1,
+    "frames_fp_gt1": 0.0,
+    "frames_fp_ge1": 0.3098,
+    "recall_by_size": {}
+   },
+   "sirst_sun_real": {
+    "frames": 105,
+    "targets": 41,
+    "recall": 0.561,
+    "fp_per_frame": 0.0762,
+    "fp_max": 1,
+    "frames_fp_gt1": 0.0,
+    "frames_fp_ge1": 0.0762,
+    "recall_by_size": {
+     "33-50": 1.0,
+     "5-8": 0.44,
+     "9-16": 0.733
+    }
+   }
+  },
+  "skydet": {
+   "test_all": {
+    "frames": 21551,
+    "targets": 18575,
+    "recall": 0.5856,
+    "fp_per_frame": 0.0651,
+    "fp_max": 1,
+    "frames_fp_gt1": 0.0,
+    "frames_fp_ge1": 0.0651,
+    "recall_by_size": {
+     "17-32": 0.345,
+     "33-50": 0.557,
+     "5-8": 0.457,
+     "9-16": 0.701
+    }
+   },
+   "test_AIR": {
+    "frames": 5268,
+    "targets": 3911,
+    "recall": 0.7448,
+    "fp_per_frame": 0.0321,
+    "fp_max": 1,
+    "frames_fp_gt1": 0.0,
+    "frames_fp_ge1": 0.0321,
+    "recall_by_size": {
+     "17-32": 0.763,
+     "33-50": 0.694,
+     "5-8": 0.0,
+     "9-16": 0.876
+    }
+   },
+   "test_MIXED": {
+    "frames": 16174,
+    "targets": 14664,
+    "recall": 0.5432,
+    "fp_per_frame": 0.0754,
+    "fp_max": 1,
+    "frames_fp_gt1": 0.0,
+    "frames_fp_ge1": 0.0754,
+    "recall_by_size": {
+     "17-32": 0.268,
+     "33-50": 0.299,
+     "5-8": 0.458,
+     "9-16": 0.685
+    }
+   },
+   "test_empty": {
+    "frames": 1019,
+    "targets": 0,
+    "recall": null,
+    "fp_per_frame": 0.0677,
+    "fp_max": 1,
+    "frames_fp_gt1": 0.0,
+    "frames_fp_ge1": 0.0677,
+    "recall_by_size": {}
+   },
+   "test_sun_synth": {
+    "frames": 3074,
+    "targets": 1863,
+    "recall": 0.5582,
+    "fp_per_frame": 0.0677,
+    "fp_max": 1,
+    "frames_fp_gt1": 0.0,
+    "frames_fp_ge1": 0.0677,
+    "recall_by_size": {
+     "17-32": 0.341,
+     "33-50": 0.503,
+     "5-8": 0.431,
+     "9-16": 0.674
+    }
+   },
+   "sirst_sky_targets": {
+    "frames": 514,
+    "targets": 305,
+    "recall": 0.8197,
+    "fp_per_frame": 0.0097,
+    "fp_max": 1,
+    "frames_fp_gt1": 0.0,
+    "frames_fp_ge1": 0.0097,
+    "recall_by_size": {
+     "17-32": 0.759,
+     "33-50": 0.25,
+     "5-8": 0.818,
+     "9-16": 0.858
+    }
+   },
+   "sirst_no_targets": {
+    "frames": 255,
+    "targets": 0,
+    "recall": null,
+    "fp_per_frame": 0.1686,
+    "fp_max": 1,
+    "frames_fp_gt1": 0.0,
+    "frames_fp_ge1": 0.1686,
+    "recall_by_size": {}
+   },
+   "sirst_sun_real": {
+    "frames": 105,
+    "targets": 41,
+    "recall": 0.878,
+    "fp_per_frame": 0.0762,
+    "fp_max": 1,
+    "frames_fp_gt1": 0.0,
+    "frames_fp_ge1": 0.0762,
+    "recall_by_size": {
+     "33-50": 1.0,
+     "5-8": 0.88,
+     "9-16": 0.867
+    }
+   }
+  },
+  "yolo+skydet": {
+   "test_all": {
+    "frames": 21551,
+    "targets": 18575,
+    "recall": 0.8522,
+    "fp_per_frame": 0.0509,
+    "fp_max": 1,
+    "frames_fp_gt1": 0.0,
+    "frames_fp_ge1": 0.0509,
+    "recall_by_size": {
+     "17-32": 0.893,
+     "33-50": 0.994,
+     "5-8": 0.499,
+     "9-16": 0.805
+    }
+   },
+   "test_AIR": {
+    "frames": 5268,
+    "targets": 3911,
+    "recall": 0.9949,
+    "fp_per_frame": 0.0146,
+    "fp_max": 1,
+    "frames_fp_gt1": 0.0,
+    "frames_fp_ge1": 0.0146,
+    "recall_by_size": {
+     "17-32": 0.994,
+     "33-50": 0.997,
+     "5-8": 0.0,
+     "9-16": 0.993
+    }
+   },
+   "test_MIXED": {
+    "frames": 16174,
+    "targets": 14664,
+    "recall": 0.8141,
+    "fp_per_frame": 0.0616,
+    "fp_max": 1,
+    "frames_fp_gt1": 0.0,
+    "frames_fp_ge1": 0.0616,
+    "recall_by_size": {
+     "17-32": 0.874,
+     "33-50": 0.988,
+     "5-8": 0.501,
+     "9-16": 0.788
+    }
+   },
+   "test_empty": {
+    "frames": 1019,
+    "targets": 0,
+    "recall": null,
+    "fp_per_frame": 0.1639,
+    "fp_max": 1,
+    "frames_fp_gt1": 0.0,
+    "frames_fp_ge1": 0.1639,
+    "recall_by_size": {}
+   },
+   "test_sun_synth": {
+    "frames": 3074,
+    "targets": 1863,
+    "recall": 0.8561,
+    "fp_per_frame": 0.0833,
+    "fp_max": 1,
+    "frames_fp_gt1": 0.0,
+    "frames_fp_ge1": 0.0833,
+    "recall_by_size": {
+     "17-32": 0.906,
+     "33-50": 0.992,
+     "5-8": 0.483,
+     "9-16": 0.808
+    }
+   },
+   "sirst_sky_targets": {
+    "frames": 514,
+    "targets": 305,
+    "recall": 0.8393,
+    "fp_per_frame": 0.0136,
+    "fp_max": 1,
+    "frames_fp_gt1": 0.0,
+    "frames_fp_ge1": 0.0136,
+    "recall_by_size": {
+     "17-32": 0.862,
+     "33-50": 1.0,
+     "5-8": 0.818,
+     "9-16": 0.858
+    }
+   },
+   "sirst_no_targets": {
+    "frames": 255,
+    "targets": 0,
+    "recall": null,
+    "fp_per_frame": 0.3255,
+    "fp_max": 1,
+    "frames_fp_gt1": 0.0,
+    "frames_fp_ge1": 0.3255,
+    "recall_by_size": {}
+   },
+   "sirst_sun_real": {
+    "frames": 105,
+    "targets": 41,
+    "recall": 0.878,
+    "fp_per_frame": 0.0952,
+    "fp_max": 1,
+    "frames_fp_gt1": 0.0,
+    "frames_fp_ge1": 0.0952,
+    "recall_by_size": {
+     "33-50": 1.0,
+     "5-8": 0.88,
+     "9-16": 0.867
+    }
+   }
+  },
+  "yolo (TRT FP16)": {
+   "test_all": {
+    "frames": 21551,
+    "targets": 18575,
+    "recall": 0.8637,
+    "fp_per_frame": 0.059,
+    "fp_max": 1,
+    "frames_fp_gt1": 0.0,
+    "frames_fp_ge1": 0.059,
+    "recall_by_size": {
+     "17-32": 0.905,
+     "33-50": 0.995,
+     "5-8": 0.509,
+     "9-16": 0.82
+    }
+   },
+   "test_AIR": {
+    "frames": 5268,
+    "targets": 3911,
+    "recall": 0.9951,
+    "fp_per_frame": 0.0165,
+    "fp_max": 1,
+    "frames_fp_gt1": 0.0,
+    "frames_fp_ge1": 0.0165,
+    "recall_by_size": {
+     "17-32": 0.994,
+     "33-50": 0.997,
+     "5-8": 0.0,
+     "9-16": 0.993
+    }
+   },
+   "test_MIXED": {
+    "frames": 16174,
+    "targets": 14664,
+    "recall": 0.8286,
+    "fp_per_frame": 0.0721,
+    "fp_max": 1,
+    "frames_fp_gt1": 0.0,
+    "frames_fp_ge1": 0.0721,
+    "recall_by_size": {
+     "17-32": 0.888,
+     "33-50": 0.99,
+     "5-8": 0.511,
+     "9-16": 0.804
+    }
+   },
+   "test_empty": {
+    "frames": 1019,
+    "targets": 0,
+    "recall": null,
+    "fp_per_frame": 0.2139,
+    "fp_max": 1,
+    "frames_fp_gt1": 0.0,
+    "frames_fp_ge1": 0.2139,
+    "recall_by_size": {}
+   },
+   "test_sun_synth": {
+    "frames": 3074,
+    "targets": 1863,
+    "recall": 0.8733,
+    "fp_per_frame": 0.107,
+    "fp_max": 1,
+    "frames_fp_gt1": 0.0,
+    "frames_fp_ge1": 0.107,
+    "recall_by_size": {
+     "17-32": 0.915,
+     "33-50": 0.992,
+     "5-8": 0.534,
+     "9-16": 0.833
+    }
+   },
+   "sirst_sky_targets": {
+    "frames": 514,
+    "targets": 305,
+    "recall": 0.6426,
+    "fp_per_frame": 0.0136,
+    "fp_max": 1,
+    "frames_fp_gt1": 0.0,
+    "frames_fp_ge1": 0.0136,
+    "recall_by_size": {
+     "17-32": 0.793,
+     "33-50": 1.0,
+     "5-8": 0.553,
+     "9-16": 0.717
+    }
+   },
+   "sirst_no_targets": {
+    "frames": 255,
+    "targets": 0,
+    "recall": null,
+    "fp_per_frame": 0.3098,
+    "fp_max": 1,
+    "frames_fp_gt1": 0.0,
+    "frames_fp_ge1": 0.3098,
+    "recall_by_size": {}
+   },
+   "sirst_sun_real": {
+    "frames": 105,
+    "targets": 41,
+    "recall": 0.561,
+    "fp_per_frame": 0.0762,
+    "fp_max": 1,
+    "frames_fp_gt1": 0.0,
+    "frames_fp_ge1": 0.0762,
+    "recall_by_size": {
+     "33-50": 1.0,
+     "5-8": 0.44,
+     "9-16": 0.733
+    }
+   }
+  },
+  "yolo+skydet (TRT FP16)": {
+   "test_all": {
+    "frames": 21551,
+    "targets": 18575,
+    "recall": 0.8521,
+    "fp_per_frame": 0.0511,
+    "fp_max": 1,
+    "frames_fp_gt1": 0.0,
+    "frames_fp_ge1": 0.0511,
+    "recall_by_size": {
+     "17-32": 0.893,
+     "33-50": 0.994,
+     "5-8": 0.499,
+     "9-16": 0.805
+    }
+   },
+   "test_AIR": {
+    "frames": 5268,
+    "targets": 3911,
+    "recall": 0.9949,
+    "fp_per_frame": 0.0146,
+    "fp_max": 1,
+    "frames_fp_gt1": 0.0,
+    "frames_fp_ge1": 0.0146,
+    "recall_by_size": {
+     "17-32": 0.994,
+     "33-50": 0.997,
+     "5-8": 0.0,
+     "9-16": 0.993
+    }
+   },
+   "test_MIXED": {
+    "frames": 16174,
+    "targets": 14664,
+    "recall": 0.814,
+    "fp_per_frame": 0.062,
+    "fp_max": 1,
+    "frames_fp_gt1": 0.0,
+    "frames_fp_ge1": 0.062,
+    "recall_by_size": {
+     "17-32": 0.874,
+     "33-50": 0.988,
+     "5-8": 0.501,
+     "9-16": 0.787
+    }
+   },
+   "test_empty": {
+    "frames": 1019,
+    "targets": 0,
+    "recall": null,
+    "fp_per_frame": 0.1639,
+    "fp_max": 1,
+    "frames_fp_gt1": 0.0,
+    "frames_fp_ge1": 0.1639,
+    "recall_by_size": {}
+   },
+   "test_sun_synth": {
+    "frames": 3074,
+    "targets": 1863,
+    "recall": 0.8556,
+    "fp_per_frame": 0.0846,
+    "fp_max": 1,
+    "frames_fp_gt1": 0.0,
+    "frames_fp_ge1": 0.0846,
+    "recall_by_size": {
+     "17-32": 0.906,
+     "33-50": 0.992,
+     "5-8": 0.483,
+     "9-16": 0.807
+    }
+   },
+   "sirst_sky_targets": {
+    "frames": 514,
+    "targets": 305,
+    "recall": 0.8393,
+    "fp_per_frame": 0.0136,
+    "fp_max": 1,
+    "frames_fp_gt1": 0.0,
+    "frames_fp_ge1": 0.0136,
+    "recall_by_size": {
+     "17-32": 0.862,
+     "33-50": 1.0,
+     "5-8": 0.818,
+     "9-16": 0.858
+    }
+   },
+   "sirst_no_targets": {
+    "frames": 255,
+    "targets": 0,
+    "recall": null,
+    "fp_per_frame": 0.3294,
+    "fp_max": 1,
+    "frames_fp_gt1": 0.0,
+    "frames_fp_ge1": 0.3294,
+    "recall_by_size": {}
+   },
+   "sirst_sun_real": {
+    "frames": 105,
+    "targets": 41,
+    "recall": 0.878,
+    "fp_per_frame": 0.0952,
+    "fp_max": 1,
+    "frames_fp_gt1": 0.0,
+    "frames_fp_ge1": 0.0952,
+    "recall_by_size": {
+     "33-50": 1.0,
+     "5-8": 0.88,
+     "9-16": 0.867
+    }
+   }
+  }
+ },
+ "speed": {
+  "yolo_pytorch_fp32": {
+   "ms_mean": 11.69,
+   "ms_p95": 12.55,
+   "fps": 85.6
+  },
+  "yolo_pytorch_fp16": {
+   "ms_mean": 12.34,
+   "ms_p95": 13.07,
+   "fps": 81.0
+  },
+  "yolo_trt_fp16": {
+   "ms_mean": 2.55,
+   "ms_p95": 2.73,
+   "fps": 391.5
+  },
+  "yolo_trt_fp16+skydet": {
+   "ms_mean": 13.17,
+   "ms_p95": 15.81,
+   "fps": 75.9
+  },
+  "skydet_ort_cuda": {
+   "ms_mean": 9.62,
+   "ms_p95": 10.01,
+   "fps": 103.9
+  }
+ },
+ "final_system": "yolo+skydet (TRT FP16)",
+ "notes": [
+  "Пороги підібрано на val (Anti-UAV410 val + SIRST val_irstd/val_sun/val_bg), test для вибору не використовувався.",
+  "top-1: на кадрі не більше 1 FP.",
+  "Влучання: центр рамки в рамці цілі +-3 px; Recall для цілей 5-50 px.",
+  "Системи без позначки TRT: YOLO PyTorch FP32, batch 16. З позначкою: YOLO TensorRT FP16, batch 1. skydet всюди ONNX Runtime CUDA FP32.",
+  "Швидкість: увесь конвеєр на кадрі в пам'яті, batch 1, 1000 кадрів після прогріву.",
+  "test_sun_synth зроблено тим самим генератором сонця, що й у навчанні: оцінка оптимістична. Справжнє сонце: sirst_sun_real."
+ ]
+}

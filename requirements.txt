@@ -1,0 +1,9 @@
+numpy
+opencv-python
+pandas
+onnxruntime-gpu==1.24.*   # 1.30+ needs CUDA 13
+ultralytics>=8.4
+tensorrt-cu12             # optional: TensorRT FP16 engines
+matplotlib
+tqdm
+PyYAML

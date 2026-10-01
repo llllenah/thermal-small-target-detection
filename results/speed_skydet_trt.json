@@ -1,0 +1,89 @@
+{
+ "gpu": "NVIDIA GeForce RTX 4090",
+ "frame": "640x512",
+ "batch": 1,
+ "frames": 1000,
+ "warmup": 50,
+ "note": "час на кадрі в пам'яті: підготовка, модель, постобробка, злиття; 50 кадрів SIRST (sky_targets, sun_real, no_targets) по колу; без читання з диска",
+ "fusion": {
+  "ty": 0.15,
+  "ts": 0.3,
+  "a": 0.25,
+  "topk": 1
+ },
+ "skydet_cfg": {
+  "topk": 5,
+  "lr_thr": 0.0,
+  "thr": 0.5
+ },
+ "versions": {
+  "torch": "2.8.0+cu128",
+  "tensorrt": "10.16.1.11",
+  "onnxruntime": "1.24.4",
+  "ultralytics": "8.4.171"
+ },
+ "results": {
+  "yolo_trt_fp16": {
+   "ms_mean": 1.59,
+   "ms_median": 1.52,
+   "ms_p95": 1.78,
+   "fps": 628.0
+  },
+  "skydet_cuda_fp32": {
+   "ms_mean": 6.81,
+   "ms_median": 6.56,
+   "ms_p95": 7.82,
+   "fps": 146.8
+  },
+  "skydet_cuda_fp32_model_only": {
+   "ms_mean": 3.04,
+   "ms_median": 3.03,
+   "ms_p95": 3.07,
+   "fps": 329.3
+  },
+  "skydet_trt_fp16": {
+   "ms_mean": 5.07,
+   "ms_median": 4.82,
+   "ms_p95": 6.02,
+   "fps": 197.2
+  },
+  "skydet_trt_fp16_model_only": {
+   "ms_mean": 1.32,
+   "ms_median": 1.31,
+   "ms_p95": 1.39,
+   "fps": 758.6
+  },
+  "pipeline_yolo_trt_fp16+skydet_cuda_fp32": {
+   "ms_mean": 8.6,
+   "ms_median": 8.4,
+   "ms_p95": 9.56,
+   "fps": 116.3
+  },
+  "pipeline_yolo_trt_fp16+skydet_trt_fp16": {
+   "ms_mean": 6.97,
+   "ms_median": 6.75,
+   "ms_p95": 7.99,
+   "fps": 143.5
+  }
+ },
+ "repeat": {
+  "pipeline_yolo_trt_fp16+skydet_trt_fp16": {
+   "ms_mean": 7.04,
+   "ms_median": 6.78,
+   "ms_p95": 8.03,
+   "fps": 142.1
+  },
+  "pipeline_yolo_trt_fp16+skydet_cuda_fp32": {
+   "ms_mean": 8.56,
+   "ms_median": 8.31,
+   "ms_p95": 9.54,
+   "fps": 116.8
+  },
+  "yolo_trt_fp16": {
+   "ms_mean": 1.59,
+   "ms_median": 1.53,
+   "ms_p95": 1.75,
+   "fps": 630.6
+  }
+ }
+}

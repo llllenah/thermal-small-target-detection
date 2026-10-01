@@ -1,0 +1,32 @@
+{
+ "model": "adgf_lite.onnx",
+ "mean": 87.4661865234375,
+ "std": 39.71953201293945,
+ "thr": 0.5,
+ "min_side": 1,
+ "max_side": 60,
+ "sun_level": 250,
+ "sun_area": 200,
+ "sun_margin": 15,
+ "topk": 3,
+ "bg_grad_max": 0,
+ "bg_ring": 12,
+ "lr_coef": [
+  -1.2718,
+  -0.2541,
+  0.3859,
+  -0.056,
+  1.7313,
+  -1.5551,
+  2.3973,
+  -0.64,
+  -2.3691
+ ],
+ "lr_thr": 0.3,
+ "use_sun": true,
+ "use_size": true,
+ "use_bg": false,
+ "use_lr": true,
+ "use_topk": true,
+ "backend": "auto"
+}

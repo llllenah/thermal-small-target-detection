@@ -1,0 +1,21 @@
+{
+  "schema_version": "antiuav410-sky-1.0",
+  "seed": 42,
+  "sequence_decisions_sha256": "0bbdb2956ebf44ce2b9623b0c463eeb9b0196f0292f48becf7f242bc19d94f32",
+  "selected_frames_sha256": "1af0191c9ce79f2b8cfbb562d407322b4321d2df4ed56a91da03e90e7d0f4d28",
+  "expected_total_frames": 141880,
+  "RAW_validation": "PENDING_RAW_VALIDATION",
+  "train_frames": 98728,
+  "val_frames": 21601,
+  "test_frames": 21551,
+  "positive_frames": 135009,
+  "negative_frames": 1213,
+  "hard_negative_frames": 5658,
+  "AIR_positive_frames": 30374,
+  "MIXED_positive_frames": 104635,
+  "size_5_8": 8938,
+  "size_9_16": 50716,
+  "size_17_32": 42957,
+  "size_33_64": 29577,
+  "size_over_64": 2821
+}

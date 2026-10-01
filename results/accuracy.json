@@ -1,0 +1,314 @@
+{
+ "config": {
+  "ty": 0.15,
+  "ts": 0.3,
+  "a": 0.25
+ },
+ "rule": "влучання: центр рамки в рамці цілі +-3 px; Recall для цілей 5-50 px; top-1",
+ "yolo_backend": "TensorRT FP16",
+ "results": {
+  "sirst_sky_targets": {
+   "yolo_trt_fp16": {
+    "frames": 514,
+    "targets": 305,
+    "recall": 0.5607,
+    "fp_per_frame": 0.0019,
+    "fp_max": 1,
+    "recall_by_size": {
+     "17-32": 0.724,
+     "33-50": 0.75,
+     "5-8": 0.459,
+     "9-16": 0.655
+    }
+   },
+   "yolo_pytorch_fp32": {
+    "frames": 514,
+    "targets": 305,
+    "recall": 0.5607,
+    "fp_per_frame": 0.0019,
+    "fp_max": 1,
+    "recall_by_size": {
+     "17-32": 0.724,
+     "33-50": 0.75,
+     "5-8": 0.459,
+     "9-16": 0.655
+    }
+   },
+   "skydet_cuda_fp32": {
+    "frames": 514,
+    "targets": 305,
+    "recall": 0.8197,
+    "fp_per_frame": 0.0097,
+    "fp_max": 1,
+    "recall_by_size": {
+     "17-32": 0.759,
+     "33-50": 0.25,
+     "5-8": 0.818,
+     "9-16": 0.858
+    }
+   },
+   "skydet_native_top3_cuda_fp32": {
+    "frames": 514,
+    "targets": 305,
+    "recall": 0.8918,
+    "fp_per_frame": 0.0409,
+    "fp_max": 2,
+    "recall_by_size": {
+     "17-32": 0.759,
+     "33-50": 0.5,
+     "5-8": 0.925,
+     "9-16": 0.894
+    }
+   },
+   "pipeline_skydet_cuda_fp32": {
+    "frames": 514,
+    "targets": 305,
+    "recall": 0.8393,
+    "fp_per_frame": 0.0136,
+    "fp_max": 1,
+    "recall_by_size": {
+     "17-32": 0.862,
+     "33-50": 1.0,
+     "5-8": 0.818,
+     "9-16": 0.858
+    }
+   },
+   "skydet_trt_fp16": {
+    "frames": 514,
+    "targets": 305,
+    "recall": 0.8197,
+    "fp_per_frame": 0.0097,
+    "fp_max": 1,
+    "recall_by_size": {
+     "17-32": 0.759,
+     "33-50": 0.25,
+     "5-8": 0.818,
+     "9-16": 0.858
+    }
+   },
+   "skydet_native_top3_trt_fp16": {
+    "frames": 514,
+    "targets": 305,
+    "recall": 0.8918,
+    "fp_per_frame": 0.0409,
+    "fp_max": 2,
+    "recall_by_size": {
+     "17-32": 0.759,
+     "33-50": 0.5,
+     "5-8": 0.925,
+     "9-16": 0.894
+    }
+   },
+   "pipeline_skydet_trt_fp16": {
+    "frames": 514,
+    "targets": 305,
+    "recall": 0.8393,
+    "fp_per_frame": 0.0136,
+    "fp_max": 1,
+    "recall_by_size": {
+     "17-32": 0.862,
+     "33-50": 1.0,
+     "5-8": 0.818,
+     "9-16": 0.858
+    }
+   }
+  },
+  "sirst_sun_real": {
+   "yolo_trt_fp16": {
+    "frames": 105,
+    "targets": 41,
+    "recall": 0.3902,
+    "fp_per_frame": 0.0286,
+    "fp_max": 1,
+    "recall_by_size": {
+     "33-50": 0.0,
+     "5-8": 0.28,
+     "9-16": 0.6
+    }
+   },
+   "yolo_pytorch_fp32": {
+    "frames": 105,
+    "targets": 41,
+    "recall": 0.3902,
+    "fp_per_frame": 0.0286,
+    "fp_max": 1,
+    "recall_by_size": {
+     "33-50": 0.0,
+     "5-8": 0.28,
+     "9-16": 0.6
+    }
+   },
+   "skydet_cuda_fp32": {
+    "frames": 105,
+    "targets": 41,
+    "recall": 0.878,
+    "fp_per_frame": 0.0762,
+    "fp_max": 1,
+    "recall_by_size": {
+     "33-50": 1.0,
+     "5-8": 0.88,
+     "9-16": 0.867
+    }
+   },
+   "skydet_native_top3_cuda_fp32": {
+    "frames": 105,
+    "targets": 41,
+    "recall": 0.9024,
+    "fp_per_frame": 0.1143,
+    "fp_max": 2,
+    "recall_by_size": {
+     "33-50": 1.0,
+     "5-8": 0.92,
+     "9-16": 0.867
+    }
+   },
+   "pipeline_skydet_cuda_fp32": {
+    "frames": 105,
+    "targets": 41,
+    "recall": 0.878,
+    "fp_per_frame": 0.0952,
+    "fp_max": 1,
+    "recall_by_size": {
+     "33-50": 1.0,
+     "5-8": 0.88,
+     "9-16": 0.867
+    }
+   },
+   "skydet_trt_fp16": {
+    "frames": 105,
+    "targets": 41,
+    "recall": 0.878,
+    "fp_per_frame": 0.0762,
+    "fp_max": 1,
+    "recall_by_size": {
+     "33-50": 1.0,
+     "5-8": 0.88,
+     "9-16": 0.867
+    }
+   },
+   "skydet_native_top3_trt_fp16": {
+    "frames": 105,
+    "targets": 41,
+    "recall": 0.9024,
+    "fp_per_frame": 0.1143,
+    "fp_max": 2,
+    "recall_by_size": {
+     "33-50": 1.0,
+     "5-8": 0.92,
+     "9-16": 0.867
+    }
+   },
+   "pipeline_skydet_trt_fp16": {
+    "frames": 105,
+    "targets": 41,
+    "recall": 0.878,
+    "fp_per_frame": 0.0952,
+    "fp_max": 1,
+    "recall_by_size": {
+     "33-50": 1.0,
+     "5-8": 0.88,
+     "9-16": 0.867
+    }
+   }
+  },
+  "sirst_no_targets": {
+   "yolo_trt_fp16": {
+    "frames": 255,
+    "targets": 0,
+    "recall": null,
+    "fp_per_frame": 0.1922,
+    "fp_max": 1,
+    "recall_by_size": {}
+   },
+   "yolo_pytorch_fp32": {
+    "frames": 255,
+    "targets": 0,
+    "recall": null,
+    "fp_per_frame": 0.1882,
+    "fp_max": 1,
+    "recall_by_size": {}
+   },
+   "skydet_cuda_fp32": {
+    "frames": 255,
+    "targets": 0,
+    "recall": null,
+    "fp_per_frame": 0.1686,
+    "fp_max": 1,
+    "recall_by_size": {}
+   },
+   "skydet_native_top3_cuda_fp32": {
+    "frames": 255,
+    "targets": 0,
+    "recall": null,
+    "fp_per_frame": 0.1843,
+    "fp_max": 2,
+    "recall_by_size": {}
+   },
+   "pipeline_skydet_cuda_fp32": {
+    "frames": 255,
+    "targets": 0,
+    "recall": null,
+    "fp_per_frame": 0.3294,
+    "fp_max": 1,
+    "recall_by_size": {}
+   },
+   "skydet_trt_fp16": {
+    "frames": 255,
+    "targets": 0,
+    "recall": null,
+    "fp_per_frame": 0.1686,
+    "fp_max": 1,
+    "recall_by_size": {}
+   },
+   "skydet_native_top3_trt_fp16": {
+    "frames": 255,
+    "targets": 0,
+    "recall": null,
+    "fp_per_frame": 0.1843,
+    "fp_max": 2,
+    "recall_by_size": {}
+   },
+   "pipeline_skydet_trt_fp16": {
+    "frames": 255,
+    "targets": 0,
+    "recall": null,
+    "fp_per_frame": 0.3294,
+    "fp_max": 1,
+    "recall_by_size": {}
+   }
+  }
+ },
+ "prob_diff": {
+  "sirst_sky_targets": {
+   "max_abs": 0.108,
+   "mean_of_max": 0.0108,
+   "frames_checked": 103,
+   "frames_with_different_skydet_blobs": 0
+  },
+  "sirst_sun_real": {
+   "max_abs": 0.0927,
+   "mean_of_max": 0.0139,
+   "frames_checked": 105,
+   "frames_with_different_skydet_blobs": 0
+  },
+  "sirst_no_targets": {
+   "max_abs": 0.0927,
+   "mean_of_max": 0.0066,
+   "frames_checked": 128,
+   "frames_with_different_skydet_blobs": 0
+  }
+ },
+ "recall_drop_pp": {
+  "sirst_sky_targets": {
+   "skydet": 0.0,
+   "skydet_native_top3": 0.0,
+   "pipeline_skydet": 0.0
+  },
+  "sirst_sun_real": {
+   "skydet": 0.0,
+   "skydet_native_top3": 0.0,
+   "pipeline_skydet": 0.0
+  }
+ },
+ "trt_fp16_ok": true
+}

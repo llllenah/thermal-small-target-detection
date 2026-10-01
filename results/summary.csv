@@ -1,0 +1,41 @@
+system,set,frames,targets,recall,fp_per_frame,fp_max
+yolo,test_all,21551,18575,0.864,0.0591,1
+yolo,test_AIR,5268,3911,0.9954,0.0167,1
+yolo,test_MIXED,16174,14664,0.8289,0.0722,1
+yolo,test_empty,1019,0,,0.2149,1
+yolo,test_sun_synth,3074,1863,0.8744,0.107,1
+yolo,sirst_sky_targets,514,305,0.6426,0.0136,1
+yolo,sirst_no_targets,255,0,,0.3098,1
+yolo,sirst_sun_real,105,41,0.561,0.0762,1
+skydet,test_all,21551,18575,0.5856,0.0651,1
+skydet,test_AIR,5268,3911,0.7448,0.0321,1
+skydet,test_MIXED,16174,14664,0.5432,0.0754,1
+skydet,test_empty,1019,0,,0.0677,1
+skydet,test_sun_synth,3074,1863,0.5582,0.0677,1
+skydet,sirst_sky_targets,514,305,0.8197,0.0097,1
+skydet,sirst_no_targets,255,0,,0.1686,1
+skydet,sirst_sun_real,105,41,0.878,0.0762,1
+yolo+skydet,test_all,21551,18575,0.8522,0.0509,1
+yolo+skydet,test_AIR,5268,3911,0.9949,0.0146,1
+yolo+skydet,test_MIXED,16174,14664,0.8141,0.0616,1
+yolo+skydet,test_empty,1019,0,,0.1639,1
+yolo+skydet,test_sun_synth,3074,1863,0.8561,0.0833,1
+yolo+skydet,sirst_sky_targets,514,305,0.8393,0.0136,1
+yolo+skydet,sirst_no_targets,255,0,,0.3255,1
+yolo+skydet,sirst_sun_real,105,41,0.878,0.0952,1
+yolo (TRT FP16),test_all,21551,18575,0.8637,0.059,1
+yolo (TRT FP16),test_AIR,5268,3911,0.9951,0.0165,1
+yolo (TRT FP16),test_MIXED,16174,14664,0.8286,0.0721,1
+yolo (TRT FP16),test_empty,1019,0,,0.2139,1
+yolo (TRT FP16),test_sun_synth,3074,1863,0.8733,0.107,1
+yolo (TRT FP16),sirst_sky_targets,514,305,0.6426,0.0136,1
+yolo (TRT FP16),sirst_no_targets,255,0,,0.3098,1
+yolo (TRT FP16),sirst_sun_real,105,41,0.561,0.0762,1
+yolo+skydet (TRT FP16),test_all,21551,18575,0.8521,0.0511,1
+yolo+skydet (TRT FP16),test_AIR,5268,3911,0.9949,0.0146,1
+yolo+skydet (TRT FP16),test_MIXED,16174,14664,0.814,0.062,1
+yolo+skydet (TRT FP16),test_empty,1019,0,,0.1639,1
+yolo+skydet (TRT FP16),test_sun_synth,3074,1863,0.8556,0.0846,1
+yolo+skydet (TRT FP16),sirst_sky_targets,514,305,0.8393,0.0136,1
+yolo+skydet (TRT FP16),sirst_no_targets,255,0,,0.3294,1
+yolo+skydet (TRT FP16),sirst_sun_real,105,41,0.878,0.0952,1
